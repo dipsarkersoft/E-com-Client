@@ -89,7 +89,7 @@ const handleDelete = async (e) => {
 return (
   <>
 
-    <div className="container-fluid">
+    <div className="container-fluid BDY">
       <div className="row">
         <div className="col-md-3">
           <AdminMenu />

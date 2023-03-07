@@ -44,7 +44,7 @@ const AdminOrder = () => {
     }
   };
   return (
-    <div className="container-fluid">
+    <div className="container-fluid BDY">
       <div className="row dashboard">
         <div className="col-md-2">
           <AdminMenu />
@@ -84,7 +84,7 @@ const AdminOrder = () => {
                         </Select>
                       </td>
                       
-                      <td>{moment(o?.createAt).fromNow()}</td>
+                      <td>{moment(o?.createAt).format("MMM Do YY")}</td>
                       <td>{o?.payment.success ? "Success" : "Failed"}</td>
                       <td>{o?.products?.length}</td>
                     </tr>

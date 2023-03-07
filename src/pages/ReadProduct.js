@@ -50,8 +50,8 @@ const ReadProduct = () => {
 
 
          
-          <>
-         <div className="row container product-details">
+          <div className='container-fluid BDY'>
+         <div className="row container ">
            <div className="col-md-6">
              <img
                src={BaseUrl+`${product._id}`}
@@ -85,7 +85,7 @@ const ReadProduct = () => {
            </div>
          </div>
          <hr />
-         <div className="row container similar-products">
+         <div className="row container ">
            <h4>Similar Products ➡️</h4>
            {relatedProducts.length < 1 && (
              <p className="text-center">No Similar Products found</p>
@@ -129,7 +129,7 @@ const ReadProduct = () => {
              ))}
            </div>
          </div>
-         </>
+         </div>
      );
 
 

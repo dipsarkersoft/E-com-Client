@@ -20,7 +20,9 @@
    .form-control {
      outline: -webkit-focus-ring-color auto 0px !important;
    }
-   
+ .BDY{
+  margin-top: 50px;
+ }  
 
 .navbar{
   background-color: rgba(136, 136, 136, 0.479);

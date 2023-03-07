@@ -77,7 +77,7 @@ const CreateProduct = () => {
 
   return (
     <>
-      <div className="container-fluid dashboard">
+      <div className="BDY container-fluid dashboard">
         <div className="row">
           <div className="col-2">
             <AdminMenu />

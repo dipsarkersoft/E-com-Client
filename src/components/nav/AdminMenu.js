@@ -7,12 +7,19 @@ const AdminMenu = () => {
 
 
   return (
-     <div>
+     <div className='BDY'>
     <div className='p-3 mt-2 mb-3 h4 bg-light'>
      Admin      
     </div>
 
     <ul className='list-group list-unstyled'>
+
+    <li>
+          <NavLink className="list-group-item" to="/dashboard/admin/update">
+             Profile
+
+          </NavLink>
+     </li>
      <li>
           <NavLink className="list-group-item" to="/dashboard/admin/category">
                Create category
@@ -32,12 +39,7 @@ const AdminMenu = () => {
 
           </NavLink>
      </li>
-     <li>
-          <NavLink className="list-group-item" to="/dashboard/admin/update">
-              Product list
-
-          </NavLink>
-     </li>
+     
      <li>
           <NavLink className="list-group-item" to="/dashboard/admin/allOrder">
               Allorder

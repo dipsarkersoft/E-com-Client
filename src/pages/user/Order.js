@@ -58,8 +58,8 @@ const UserOrders = () => {
                       <tr>
                         <td>{i + 1}</td>
                         <td>{o?.status}</td>
-                        
-                        <td>{moment(o?.createAt).fromNow()}</td>
+                       
+                        <td>{moment(o?.createAt).format("MMM Do YY")}</td>
                         <td>{o?.payment.success ? "Success" : "Failed"}</td>
                         <td>{o?.products?.length}</td>
                       </tr>

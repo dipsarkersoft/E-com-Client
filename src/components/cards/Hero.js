@@ -10,10 +10,8 @@ import { Carousel } from 'antd';
 
 
 
-const Hero = ({
-     title,
-     subTitle="welcome to React E-commerce"
-}) => {
+const Hero = () => {
+     
   return (
     <div className='container-fluid'>
      <div className='row'>
