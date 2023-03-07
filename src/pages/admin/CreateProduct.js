@@ -23,11 +23,15 @@ const CreateProduct = () => {
   const getAllCategory = async () => {
 
     try {
+
+      
       const { data } = await axios.get("/categories");
+      
       if (data) {
         setCategories(data);
       }
     } catch (error) {
+      
       toast.error("Something went wrong in getting catgeory");
     }
   };
@@ -49,8 +53,9 @@ const CreateProduct = () => {
       productData.append("shipping", shipping);
       productData.append("category", category);
 
+      
       const data = axios.post("/product", productData);
-
+      
       if (data?.error) {
         toast.error(data.error);
 

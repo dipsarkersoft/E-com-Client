@@ -23,7 +23,7 @@ const Register = () => {
       const {data}=await axios.post(`/register`,{name,email,number,password})
        
       if(data?.error){
-        toast.error(data.error)
+        toast.error("Register Failed")
       }
       else{
 

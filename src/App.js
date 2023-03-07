@@ -6,8 +6,6 @@ import Home from './pages/Home'
 import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
 import PrivetRoute from './components/routes/PrivetRoute'
-import AdminDashboard from './pages/admin/AdminDashboard'
-import UserDashboard from './pages/user/UserDashboard'
 import UserOrders from './pages/user/Order'
 import AdminRoute from './components/routes/AdminRoute'
 import AdminCategory from './pages/admin/Category'
@@ -20,6 +18,7 @@ import SearchValue from './pages/SearchValue';
 import CartPage from './pages/Cartpage';
 import UpdateProfile from './pages/UpdateProfile';
 import UserProfileUpdate from './pages/user/Profile';
+import AdminOrder from './pages/admin/AdminOrder';
 
 
 const PageNotFound = () => {
@@ -51,17 +50,18 @@ const App = () => {
      
      <Route path="/dashboard" element={<PrivetRoute/>}>
         
-        <Route path="User" element={<UserDashboard/>}/>
+        <Route path="User" element={<UserProfileUpdate/>}/>
         <Route path="User/update" element={<UserProfileUpdate/>}/>
         <Route path="User/orders" element={<UserOrders/>}/>
      </Route>
 
     <Route path="/dashboard" element={<AdminRoute/>}>
-      <Route path="admin" element={<AdminDashboard/>}/>
+      <Route path="admin" element={<UpdateProfile/>}/>
       <Route path="admin/update" element={<UpdateProfile/>}/>
       <Route path="admin/category" element={<AdminCategory/>}/>
       <Route path="admin/product" element={<AdminProduct/>}/>
       <Route path="admin/productiteam" element={<Products/>}/>
+      <Route path="admin/allOrder" element={<AdminOrder/>}/>
       <Route path="admin/updateProduct/:id" element={<UpdateProduct/>}/>
 
      </Route> 

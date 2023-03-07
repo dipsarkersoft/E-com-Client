@@ -38,6 +38,12 @@ const AdminMenu = () => {
 
           </NavLink>
      </li>
+     <li>
+          <NavLink className="list-group-item" to="/dashboard/admin/allOrder">
+              Allorder
+
+          </NavLink>
+     </li>
     </ul>
 
 
