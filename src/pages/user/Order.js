@@ -7,8 +7,6 @@ import moment from 'moment/moment';
 
 const UserOrders = () => {
  
-     const BaseUrl="http://localhost:8000/api/v1/photo/"
-
      const[auth,setAuth]=useAuth()
      const [orders, setOrders] = useState([]);
  

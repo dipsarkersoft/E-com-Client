@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useAuth } from '../../contex/auth'
 import { useNavigate } from 'react-router-dom'
-import Hero from '../../components/cards/Hero'
 import { toast } from 'react-hot-toast'
 
 const Register = () => {
@@ -29,7 +28,7 @@ const Register = () => {
 
         localStorage.setItem("auth",JSON.stringify(data))
        setAuth({...auth,token:data.token,User:data.User})
-       navigate('/dashboard')
+       navigate('/dashboard/User')
        toast.success("Register successful")
   }
     }

@@ -4,9 +4,8 @@ import { NavLink } from 'react-router-dom'
 const UserMenu = () => {
   return (
     <div className='BDY'>
-     <div className="p-3 mt-2 mb-2 h4 bg-light">
-          User Links
-
+     <div className="p-3 mt-2 mb-2 h6 bg-light">
+          User Dashboard
      </div>
       
       <ul className="list-group list-unstyled">

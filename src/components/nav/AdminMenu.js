@@ -8,8 +8,8 @@ const AdminMenu = () => {
 
   return (
      <div className='BDY'>
-    <div className='p-3 mt-2 mb-3 h4 bg-light'>
-     Admin      
+    <div className='p-3 mt-2 mb-3 h6 bg-light'>
+     Admin Dashboard 
     </div>
 
     <ul className='list-group list-unstyled'>
