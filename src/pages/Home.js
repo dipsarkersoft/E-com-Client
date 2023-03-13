@@ -27,7 +27,7 @@ const Home = () => {
   const getAllCategory = async () => {
     try {
       const {data} = await axios.get("/categories");
-      //console.log(data)
+      console.log(data)
 
       if (data) {
         setCategories(data);
@@ -123,15 +123,15 @@ const Home = () => {
 
        <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
-            {[categories]?.map((c) => (
+            {categories?.map((c) => (
               <Checkbox
                 key={c._id}
                 onChange={(e) => handleFilter(e.target.checked, c._id)}
               >
                 {c.name}
-              </Checkbox>
-            ))}
+              </Checkbox>    ))}
           </div>
+
           {/* price filter */}
           <h4 className="text-center mt-4">Filter By Price</h4>
           <div className="d-flex flex-column">
@@ -145,7 +145,7 @@ const Home = () => {
           </div>
           <div className="d-flex flex-column">
             <button
-              className="btn btn-danger"
+              className="btn w-50 mt-3 btn-danger"
               onClick={() => window.location.reload()}
             >
               RESET FILTERS

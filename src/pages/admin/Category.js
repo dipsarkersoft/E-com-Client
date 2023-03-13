@@ -91,13 +91,14 @@ return (
 
     <div className="container-fluid BDY">
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-2">
           <AdminMenu />
         </div>
-        <div className="col-md-9">
+
+        <div className="col-md-10">
           <div className="p-3 mt-2 mb-2 h4 bg-light">Manage Categories</div>
 
-          <CategoryForm
+          <CategoryForm 
             value={name}
             setValue={setName}
             handleSubmit={handleSubmit}
@@ -105,11 +106,11 @@ return (
 
           <hr />
 
-          <div className="col">
+          <div className="col-md-10">
             {categories?.map((c) => (
               <button
                 key={c._id}
-                className="btn btn-outline-primary m-3"
+                className="btn btn-outline-danger m-3"
                 onClick={() => {
                   setVisible(true);
                   setSelected(c);
@@ -136,6 +137,7 @@ return (
             />
           </Modal>
         </div>
+
       </div>
     </div>
   </>

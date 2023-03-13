@@ -10,11 +10,14 @@ const CategoryForm = ({
 
   return (
     <div className="p-3">
-     <form onSubmit={handleSubmit}>
+     <form
+     
+     onSubmit={handleSubmit}>
 
           <input
+          
           type="text"
-          className="form-control p-3"
+          className=" form-control p-3 "
           placeholder='write category name'
           value={value}
           onChange={(e)=>setValue(e.target.value)}

@@ -79,12 +79,30 @@ const CreateProduct = () => {
     <>
       <div className="BDY container-fluid dashboard">
         <div className="row">
+
           <div className="col-2">
             <AdminMenu />
           </div>
-          <div className="col-10">
+          <div className="col-10 row">
             <h1>Create Product</h1>
-            <div className="m-1 w-50">
+
+            <div>
+            <div className="mb-2 col-4 p-2">
+                {photo && (
+                  <div className="text-center">
+                    <img 
+                     
+                      src={URL.createObjectURL(photo)}
+                      alt="product_photo"
+                      height={"100px"}
+                      className="img img-responsive"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="row">
+            <div className="col-4 p-2">
               <Select
                 bordered={false}
                 placeholder="Select a category"
@@ -101,31 +119,8 @@ const CreateProduct = () => {
                   </Option>
                 ))}
               </Select>
-              <div className="mb-3">
-                <label className="btn btn-outline-secondary col-md-6">
-                  {photo ? photo.name : "Upload Photo"}
-                  <input
-                    type="file"
-                    name="photo"
-                    accept="image/*"
-                    onChange={(e) => setPhoto(e.target.files[0])}
-                    hidden
-                  />
-                </label>
               </div>
-              <div className="mb-3">
-                {photo && (
-                  <div className="text-center">
-                    <img
-                      src={URL.createObjectURL(photo)}
-                      alt="product_photo"
-                      height={"200px"}
-                      className="img img-responsive"
-                    />
-                  </div>
-                )}
-              </div>
-              <div className="mb-3">
+              <div className="col-4 p-2">
                 <input
                   type="text"
                   value={name}
@@ -134,7 +129,25 @@ const CreateProduct = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
+
+             
+              
+              <div className="mb-2 col-4 p-2">
+                <label className="btn btn-outline-secondary col-md-6">
+                  {photo ? photo.name : "Upload Photo"}
+                  <input
+                   type="file"
+                    name="photo"
+                    accept="image/*"
+                    onChange={(e) => setPhoto(e.target.files[0])}
+                    hidden
+                  />
+                </label>
+              </div>
+
+
+
+              <div className="mb-2 col-4 p-2">
                 <textarea
                   type="text"
                   value={description}
@@ -144,7 +157,7 @@ const CreateProduct = () => {
                 />
               </div>
 
-              <div className="mb-3">
+              <div className="mb-2 col-4 p-2">
                 <input
                   type="number"
                   value={price}
@@ -154,7 +167,7 @@ const CreateProduct = () => {
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-2 col-4 p-2">
                 <input
                   type="number"
                   min="1"
@@ -164,7 +177,7 @@ const CreateProduct = () => {
                   onChange={(e) => setQuantity(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-2 col-4 p-2">
                 <Select
                   bordered={false}
                   placeholder="Select Shipping "
@@ -179,15 +192,18 @@ const CreateProduct = () => {
                   <Option value="1">Yes</Option>
                 </Select>
               </div>
-              <div className="mb-3">
+              <div className="mb-2 col-12 p-2">
                 <button className="btn btn-primary" onClick={handleCreate}>
                   CREATE PRODUCT
                 </button>
               </div>
             </div>
+
+            
+            </div>
           </div>
         </div>
-      </div>
+      
     </>
   );
 };
